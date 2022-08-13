@@ -13,6 +13,8 @@ struct informationVIew: View {
     @State var password : String
     
     
+    
+    
     var body: some View {
         
             
@@ -35,21 +37,22 @@ struct informationVIew: View {
                 
                 Divider()
             })
-            .padding(.top,25)
+            .padding(.top,15)
             
             VStack(alignment: .leading, spacing: 8, content: {
                 Text("Phone Number")
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
                 
-                SecureField("647-123-4567", text:$password)
+                TextField("647-123-4567", text:$password)
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(.black)
                     .padding(.top,5)
                 
                 Divider()
             })
-            .padding(.top,20)
+            .padding(.top,30)
+            .padding(.bottom,40)
             
             
             
@@ -57,5 +60,7 @@ struct informationVIew: View {
         
     }
 }
+
+
 
 

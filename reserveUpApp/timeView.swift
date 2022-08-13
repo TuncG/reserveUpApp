@@ -69,7 +69,7 @@ struct timeView: View {
             .padding()
             .background(Color.blue)
             .cornerRadius(8)
-            .padding(.top,10)
+            .padding(.top,5)
         
         
         // Time drop down below
@@ -102,7 +102,7 @@ struct timeView: View {
             }.frame(height: 150)
             
         }.accentColor(.white)
-            .padding(.top,10)
+            .padding(.top,5)
             .font(.title2)
             .foregroundColor(.white)
             .padding()
