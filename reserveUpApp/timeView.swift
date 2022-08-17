@@ -9,14 +9,15 @@ import SwiftUI
 
 struct timeView: View {
     
-    @State  var currentDate : Date
+    @State  var currentDate : Date = Date()
     @State  var isExpanded = false
-    @State  var selectedNum : Int
+    @State  var selectedNum : Int = 1
+    var userInfo : UserInfo
     
     @State  var isExpandedTime = false
-    @State  var selectedTime : String
+    @State  var selectedTime : String = "5:00"
     
-     var reservationTimes = ["5:00","5:30","6:00","6:30","7:00", "7:30","8:00","8:30","9:00"]
+    var reservationTimes = ["5:00","5:30","6:00","6:30","7:00", "7:30","8:00","8:30","9:00"]
     
     var body: some View {
         Text("Your Information")
@@ -35,6 +36,7 @@ struct timeView: View {
             .scaleEffect(CGSize(width: 1.2, height: 1.2),anchor: .trailing)
             .frame(maxWidth: .infinity, alignment: .leading)
         
+        
         //People drop down below
         Text("Number of People")
             .fontWeight(.bold)
@@ -50,7 +52,7 @@ struct timeView: View {
                             .padding(.all)
                             .onTapGesture {
                                 self.selectedNum = num
-                                
+                                userInfo.selectedNum = num
                                 withAnimation{
                                     self.isExpanded.toggle()
                                 }
@@ -88,7 +90,8 @@ struct timeView: View {
                             .padding(.all)
                             .onTapGesture {
                                 self.selectedTime = num
-                                
+                                userInfo.selectedTime = num
+                                userInfo.currentDate = currentDate
                                 withAnimation{
                                     self.isExpandedTime.toggle()
                                 }

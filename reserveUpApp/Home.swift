@@ -8,45 +8,53 @@
 import SwiftUI
 
 struct Home: View {
-    @State var email = ""
-    @State var password = ""
+//    @State var email = ""
+//    @State var password = ""
     @State var nextMenu = false
-    
-    @State  var menuState = "people"
-        @State  var selectedNum = 1
-        @State  var currentDate = Date()
-        
-        @State  var selectedTime = "2:00"
+//
+//    @State  var menuState = "people"
+//    @State  var selectedNum = 1
+//    @State  var currentDate = Date()
+//
+//    @State  var selectedTime = "2:00"
+    var userInfo = UserInfo()
     
     var body: some View {
         VStack{
-          
+            
             Text("ReserveUp")
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity)
                 .background(.blue   )
                 .foregroundColor(.white)
-                
-                
-               
+            
+            
+            
             Spacer()
             VStack{
                 
                 if nextMenu == true {
-                    informationVIew(email: email, password: password)
+                    informationVIew(userInfo: userInfo)
+                    
+                    
+                    
+                    
                 }
                 if nextMenu == false {
-                   timeView(currentDate: currentDate, selectedNum: selectedNum, selectedTime: selectedTime)
+                    timeView(userInfo: userInfo)
                 }
                 
                 Button(action: {
-                    if nextMenu == true && isValidEmail(testStr: email) == false {
-                        
+                    
+                    if isValidEmail(testStr: userInfo.email) == false {
+                        print("here")
+                        print(userInfo.email)
+                        nextMenu.toggle()
                     }else {
                         nextMenu.toggle()
                     }
-                   
+                    
                 }, label: {
                     
                     Image(systemName: "arrow.right")
@@ -55,11 +63,11 @@ struct Home: View {
                         .padding()
                         .background(.blue)
                         .clipShape(Circle())
-                        
+                    
                 })
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,25)
-               
+                
             }
             .padding()
             .padding(.bottom,125)
@@ -76,10 +84,10 @@ struct Home_Previews: PreviewProvider {
 }
 
 func isValidEmail(testStr:String) -> Bool {
-            print("validate emilId: \(testStr)")
-            let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
-            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-            let result = emailTest.evaluate(with: testStr)
-            return result
-        }
+    print("validate emilId: \(testStr)")
+    let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
+    let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    let result = emailTest.evaluate(with: testStr)
+    return result
+}
 

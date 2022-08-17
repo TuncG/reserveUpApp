@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B005037928AD471B00E43DFB /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005037828AD471B00E43DFB /* userInfo.swift */; };
 		B007E73928A168B90054FA80 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007E73828A168B90054FA80 /* Home.swift */; };
 		B052A8E728906B8C001141C8 /* reserveUpAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */; };
 		B052A8E928906B8C001141C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052A8E828906B8C001141C8 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B005037828AD471B00E43DFB /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
 		B007E73828A168B90054FA80 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B052A8E328906B8C001141C8 /* reserveUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reserveUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reserveUpAppApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				B007E73828A168B90054FA80 /* Home.swift */,
+				B005037828AD471B00E43DFB /* userInfo.swift */,
 				B0ECB6C528A6DB0500F355B2 /* timeView.swift */,
 				B0ECB6C328A6D54700F355B2 /* informationVIew.swift */,
 				B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B005037928AD471B00E43DFB /* userInfo.swift in Sources */,
 				B052A8E928906B8C001141C8 /* ContentView.swift in Sources */,
 				B0ECB6C428A6D54700F355B2 /* informationVIew.swift in Sources */,
 				B0ECB6C628A6DB0500F355B2 /* timeView.swift in Sources */,
@@ -279,6 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"reserveUpApp/Preview Content\"";
+				DEVELOPMENT_TEAM = J56733LL6Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -307,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"reserveUpApp/Preview Content\"";
+				DEVELOPMENT_TEAM = J56733LL6Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
