@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct Home: View {
-//    @State var email = ""
-//    @State var password = ""
+
     @State var nextMenu = false
-//
-//    @State  var menuState = "people"
-//    @State  var selectedNum = 1
-//    @State  var currentDate = Date()
-//
-//    @State  var selectedTime = "2:00"
+
     var userInfo = UserInfo()
     
     var body: some View {
@@ -47,11 +41,13 @@ struct Home: View {
                 
                 Button(action: {
                     
-                    if isValidEmail(testStr: userInfo.email) == false {
-                        print("here")
-                        print(userInfo.email)
+                    if isValidEmailAddr(strToValidate: userInfo.email) == true {
+                      
+                       
                         nextMenu.toggle()
-                    }else {
+                    }
+                    else if userInfo.email == ""  {
+                       
                         nextMenu.toggle()
                     }
                     
@@ -83,11 +79,11 @@ struct Home_Previews: PreviewProvider {
     }
 }
 
-func isValidEmail(testStr:String) -> Bool {
-    print("validate emilId: \(testStr)")
-    let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
-    let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-    let result = emailTest.evaluate(with: testStr)
-    return result
+func isValidEmailAddr(strToValidate: String) -> Bool {
+  let emailValidationRegex = "^[\\p{L}0-9!#$%&'*+\\/=?^_`{|}~-][\\p{L}0-9.!#$%&'*+\\/=?^_`{|}~-]{0,63}@[\\p{L}0-9-]+(?:\\.[\\p{L}0-9-]{2,7})*$"  // 1
+
+  let emailValidationPredicate = NSPredicate(format: "SELF MATCHES %@", emailValidationRegex)  // 2
+
+  return emailValidationPredicate.evaluate(with: strToValidate)  // 3
 }
 

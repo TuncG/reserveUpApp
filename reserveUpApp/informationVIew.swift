@@ -42,7 +42,7 @@ struct informationVIew: View {
             }
             )
             .font(.system(size: 20, weight: .semibold))
-            .foregroundColor(Color(.black))
+            .foregroundColor(  isValidEmailAddr(strToValidate: userInfo.email) ? .black : .red)
             .padding(.top,5)
             
             Divider()
@@ -78,6 +78,8 @@ struct informationVIew: View {
         
     }
 }
+
+
 
 
 

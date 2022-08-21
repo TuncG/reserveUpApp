@@ -9,7 +9,7 @@ import Foundation
 
 class UserInfo: ObservableObject {
     
-    var email = "test"
+    var email = ""
     var password = ""
    
     
