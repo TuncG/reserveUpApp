@@ -15,6 +15,7 @@
 		B052A8EE28906B8F001141C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B052A8ED28906B8F001141C8 /* Preview Assets.xcassets */; };
 		B0ECB6C428A6D54700F355B2 /* informationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECB6C328A6D54700F355B2 /* informationVIew.swift */; };
 		B0ECB6C628A6DB0500F355B2 /* timeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECB6C528A6DB0500F355B2 /* timeView.swift */; };
+		B0EE080328B3D57300951983 /* comfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EE080228B3D57300951983 /* comfirmationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B052A8ED28906B8F001141C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0ECB6C328A6D54700F355B2 /* informationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = informationVIew.swift; sourceTree = "<group>"; };
 		B0ECB6C528A6DB0500F355B2 /* timeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeView.swift; sourceTree = "<group>"; };
+		B0EE080228B3D57300951983 /* comfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				B007E73828A168B90054FA80 /* Home.swift */,
+				B0EE080228B3D57300951983 /* comfirmationView.swift */,
 				B005037828AD471B00E43DFB /* userInfo.swift */,
 				B0ECB6C528A6DB0500F355B2 /* timeView.swift */,
 				B0ECB6C328A6D54700F355B2 /* informationVIew.swift */,
@@ -154,6 +157,7 @@
 				B0ECB6C428A6D54700F355B2 /* informationVIew.swift in Sources */,
 				B0ECB6C628A6DB0500F355B2 /* timeView.swift in Sources */,
 				B007E73928A168B90054FA80 /* Home.swift in Sources */,
+				B0EE080328B3D57300951983 /* comfirmationView.swift in Sources */,
 				B052A8E728906B8C001141C8 /* reserveUpAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

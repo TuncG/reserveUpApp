@@ -10,6 +10,8 @@ import SwiftUI
 struct Home: View {
 
     @State var nextMenu = false
+    @State var infoMenu = false
+    @State var confirmMenu = false
 
     var userInfo = UserInfo()
     
@@ -27,6 +29,11 @@ struct Home: View {
             
             Spacer()
             VStack{
+                if confirmMenu == true {
+                    
+                    comfirmationView( userInfo: userInfo)
+                    
+                }
                 
                 if nextMenu == true {
                     informationVIew(userInfo: userInfo)
@@ -35,38 +42,70 @@ struct Home: View {
                     
                     
                 }
-                if nextMenu == false {
+                else if infoMenu == false {
                     timeView(userInfo: userInfo)
                 }
                 
-                Button(action: {
+                HStack{
+                    Button(action: {
+                        if confirmMenu == true{
+                            nextMenu = true
+                           confirmMenu = false
+                        }
+                        else if infoMenu == true {
+                          nextMenu = false
+                            userInfo.email  = ""
+                           infoMenu = false
+                        }
+                        
+                        
+                    }, label: {
+                        
+                        Image(systemName: "arrow.left")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(.blue)
+                            .clipShape(Circle())
+                        
+                    })
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top,25)
                     
-                    if isValidEmailAddr(strToValidate: userInfo.email) == true {
-                      
-                       
-                        nextMenu.toggle()
+                    if confirmMenu == false {
+                    Button(action: {
+                        
+                        if isValidEmailAddr(strToValidate: userInfo.email) == true {
+                          
+                            confirmMenu = true
+                            nextMenu = false
+                            
+                           // nextMenu.toggle()
+                        }
+                        else if infoMenu == false {
+                            infoMenu = true
+                            nextMenu = true
+                        }
+                        
+                    }, label: {
+                        
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(.blue)
+                            .clipShape(Circle())
+                        
+                    })
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.top,25)
                     }
-                    else if userInfo.email == ""  {
-                       
-                        nextMenu.toggle()
-                    }
-                    
-                }, label: {
-                    
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 24, weight: .bold))
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(.blue)
-                        .clipShape(Circle())
-                    
-                })
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top,25)
+                   
+                }
                 
             }
             .padding()
-            .padding(.bottom,125)
+            .padding(.bottom,90)
             Spacer()
             
         }

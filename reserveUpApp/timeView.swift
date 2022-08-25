@@ -92,6 +92,8 @@ struct timeView: View {
                                 self.selectedTime = num
                                 userInfo.selectedTime = num
                                 userInfo.currentDate = currentDate
+                                print(userInfo.currentDate)
+                                formatDate(dateStr: userInfo.currentDate)
                                 withAnimation{
                                     self.isExpandedTime.toggle()
                                 }

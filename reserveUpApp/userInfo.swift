@@ -10,7 +10,7 @@ import Foundation
 class UserInfo: ObservableObject {
     
     var email = ""
-    var password = ""
+    var phone = ""
    
     
     var menuState = "people"
@@ -19,6 +19,19 @@ class UserInfo: ObservableObject {
     
     var selectedTime = "2:00"
     
+    
+    
 }
 
+
+
+func formatDate(dateStr: Date){
+    
+    let format = DateFormatter()
+    
+    format.dateStyle = .short
+    print("infunfc")
+    print(format.string(from: dateStr))
+    
+}
 

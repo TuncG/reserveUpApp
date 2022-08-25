@@ -10,7 +10,7 @@ import SwiftUI
 struct informationVIew: View {
     
     @State var email : String = ""
-    @State var password : String = ""
+    @State var phone : String = ""
     var userInfo : UserInfo
     
     
@@ -54,12 +54,12 @@ struct informationVIew: View {
                 .fontWeight(.bold)
                 .foregroundColor(.gray)
             
-            TextField("647-123-4567", text:$password,
+            TextField("647-123-4567", text:$phone,
                       onEditingChanged: { (isBegin) in
                 if isBegin {
                    
                 } else {
-                    userInfo.password = password
+                    userInfo.phone = phone
                   
                 }
             })
