@@ -11,13 +11,14 @@ class UserInfo: ObservableObject {
     
     var email = ""
     var phone = ""
-   
+    var newDate = ""
     
     var menuState = "people"
     var selectedNum = 1
     var currentDate = Date()
     
     var selectedTime = "2:00"
+    var password = "password"
     
     
     
@@ -25,13 +26,14 @@ class UserInfo: ObservableObject {
 
 
 
-func formatDate(dateStr: Date){
+func formatDate(dateStr: Date) -> String{
     
     let format = DateFormatter()
     
     format.dateStyle = .short
-    print("infunfc")
-    print(format.string(from: dateStr))
+    let date = format.string(from: dateStr)
+    
+    return date
     
 }
 

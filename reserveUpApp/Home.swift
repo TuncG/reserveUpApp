@@ -8,109 +8,73 @@
 import SwiftUI
 
 struct Home: View {
-
-    @State var nextMenu = false
-    @State var infoMenu = false
-    @State var confirmMenu = false
-
-    var userInfo = UserInfo()
+    
+    @State var reserveViews = false
+    @State var merchantViews = false
+   
+    
     
     var body: some View {
-        VStack{
+        
+        
+        if reserveViews  {
+            reservationView()
+        }
+        else if merchantViews  {
+            merchantView()
+        } else {
             
-            Text("ReserveUp")
-                .font(.title)
-                .fontWeight(.bold)
-                .frame(maxWidth: .infinity)
-                .background(.blue   )
-                .foregroundColor(.white)
+           
             
-            
-            
-            Spacer()
             VStack{
-                if confirmMenu == true {
-                    
-                    comfirmationView( userInfo: userInfo)
-                    
-                }
+                Text("ReserveUp")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity)
+                    .background(.blue   )
+                    .foregroundColor(.white)
+                    .padding(.bottom, 40)
                 
-                if nextMenu == true {
-                    informationVIew(userInfo: userInfo)
-                    
-                    
-                    
-                    
-                }
-                else if infoMenu == false {
-                    timeView(userInfo: userInfo)
-                }
                 
-                HStack{
-                    Button(action: {
-                        if confirmMenu == true{
-                            nextMenu = true
-                           confirmMenu = false
-                        }
-                        else if infoMenu == true {
-                          nextMenu = false
-                            userInfo.email  = ""
-                           infoMenu = false
-                        }
-                        
-                        
-                    }, label: {
-                        
-                        Image(systemName: "arrow.left")
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(.blue)
-                            .clipShape(Circle())
-                        
-                    })
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top,25)
-                    
-                    if confirmMenu == false {
-                    Button(action: {
-                        
-                        if isValidEmailAddr(strToValidate: userInfo.email) == true {
-                          
-                            confirmMenu = true
-                            nextMenu = false
-                            
-                           // nextMenu.toggle()
-                        }
-                        else if infoMenu == false {
-                            infoMenu = true
-                            nextMenu = true
-                        }
-                        
-                    }, label: {
-                        
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(.blue)
-                            .clipShape(Circle())
-                        
-                    })
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.top,25)
-                    }
-                   
-                }
+                
+                Text("Welcome to Reserveup! ")
+                    .font(.title)
+                    .fontWeight(.bold)
+                // .foregroundColor(Color("Black"))
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 100)
+                
+                
+                Button(action: { reserveViews = true }, label: {
+                    Text("Reservation ")
+                        .font(.system(size: 26, weight: .bold))
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(.blue)
+                        .cornerRadius(6)
+                        .padding(.bottom, 10)
+                })
+                
+            Button(action: { merchantViews = true }, label: {
+                Text("Merchant Login")
+                    .font(.system(size: 26, weight: .bold))
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.blue)
+                    .cornerRadius(6)
+                
+            })
+                
+                Spacer()
                 
             }
-            .padding()
-            .padding(.bottom,90)
-            Spacer()
+        }
+        
+       
             
         }
     }
-}
+
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
@@ -118,11 +82,5 @@ struct Home_Previews: PreviewProvider {
     }
 }
 
-func isValidEmailAddr(strToValidate: String) -> Bool {
-  let emailValidationRegex = "^[\\p{L}0-9!#$%&'*+\\/=?^_`{|}~-][\\p{L}0-9.!#$%&'*+\\/=?^_`{|}~-]{0,63}@[\\p{L}0-9-]+(?:\\.[\\p{L}0-9-]{2,7})*$"  // 1
 
-  let emailValidationPredicate = NSPredicate(format: "SELF MATCHES %@", emailValidationRegex)  // 2
-
-  return emailValidationPredicate.evaluate(with: strToValidate)  // 3
-}
 

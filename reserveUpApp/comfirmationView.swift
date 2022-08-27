@@ -42,7 +42,7 @@ struct comfirmationView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,1)
                 
-                
+                Text(userInfo.newDate)
             
             
             Text("Number of people")
@@ -77,8 +77,7 @@ struct comfirmationView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,1)
             
-            Text( userInfo.phone)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            
         }
             
         }

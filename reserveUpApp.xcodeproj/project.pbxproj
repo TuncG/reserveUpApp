@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B005037928AD471B00E43DFB /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005037828AD471B00E43DFB /* userInfo.swift */; };
 		B007E73928A168B90054FA80 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007E73828A168B90054FA80 /* Home.swift */; };
+		B022C4C628BA78810048DCB3 /* loginMerchantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022C4C528BA78810048DCB3 /* loginMerchantView.swift */; };
+		B022C4C828BA7D5D0048DCB3 /* merchantReservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022C4C728BA7D5D0048DCB3 /* merchantReservationsView.swift */; };
+		B022C4CB28BA7F8B0048DCB3 /* customerReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022C4CA28BA7F8B0048DCB3 /* customerReservationView.swift */; };
+		B022C4CD28BA7F980048DCB3 /* accountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022C4CC28BA7F980048DCB3 /* accountView.swift */; };
+		B022C4CF28BA7FA60048DCB3 /* restaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B022C4CE28BA7FA60048DCB3 /* restaurantView.swift */; };
 		B052A8E728906B8C001141C8 /* reserveUpAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */; };
 		B052A8E928906B8C001141C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052A8E828906B8C001141C8 /* ContentView.swift */; };
 		B052A8EB28906B8F001141C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B052A8EA28906B8F001141C8 /* Assets.xcassets */; };
@@ -16,11 +21,18 @@
 		B0ECB6C428A6D54700F355B2 /* informationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECB6C328A6D54700F355B2 /* informationVIew.swift */; };
 		B0ECB6C628A6DB0500F355B2 /* timeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECB6C528A6DB0500F355B2 /* timeView.swift */; };
 		B0EE080328B3D57300951983 /* comfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EE080228B3D57300951983 /* comfirmationView.swift */; };
+		B0F5BD3028BA5529005D3A98 /* reservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5BD2F28BA5529005D3A98 /* reservationView.swift */; };
+		B0F5BD3228BA7322005D3A98 /* merchantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5BD3128BA7322005D3A98 /* merchantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B005037828AD471B00E43DFB /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
 		B007E73828A168B90054FA80 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B022C4C528BA78810048DCB3 /* loginMerchantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginMerchantView.swift; sourceTree = "<group>"; };
+		B022C4C728BA7D5D0048DCB3 /* merchantReservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = merchantReservationsView.swift; sourceTree = "<group>"; };
+		B022C4CA28BA7F8B0048DCB3 /* customerReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customerReservationView.swift; sourceTree = "<group>"; };
+		B022C4CC28BA7F980048DCB3 /* accountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountView.swift; sourceTree = "<group>"; };
+		B022C4CE28BA7FA60048DCB3 /* restaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restaurantView.swift; sourceTree = "<group>"; };
 		B052A8E328906B8C001141C8 /* reserveUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reserveUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reserveUpAppApp.swift; sourceTree = "<group>"; };
 		B052A8E828906B8C001141C8 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -29,6 +41,8 @@
 		B0ECB6C328A6D54700F355B2 /* informationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = informationVIew.swift; sourceTree = "<group>"; };
 		B0ECB6C528A6DB0500F355B2 /* timeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeView.swift; sourceTree = "<group>"; };
 		B0EE080228B3D57300951983 /* comfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comfirmationView.swift; sourceTree = "<group>"; };
+		B0F5BD2F28BA5529005D3A98 /* reservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reservationView.swift; sourceTree = "<group>"; };
+		B0F5BD3128BA7322005D3A98 /* merchantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = merchantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B022C4C928BA7EF70048DCB3 /* toolBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				B022C4CA28BA7F8B0048DCB3 /* customerReservationView.swift */,
+				B022C4CC28BA7F980048DCB3 /* accountView.swift */,
+				B022C4CE28BA7FA60048DCB3 /* restaurantView.swift */,
+			);
+			path = toolBarViews;
+			sourceTree = "<group>";
+		};
 		B052A8DA28906B8C001141C8 = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +85,12 @@
 		B052A8E528906B8C001141C8 /* reserveUpApp */ = {
 			isa = PBXGroup;
 			children = (
+				B022C4C928BA7EF70048DCB3 /* toolBarViews */,
 				B007E73828A168B90054FA80 /* Home.swift */,
+				B022C4C528BA78810048DCB3 /* loginMerchantView.swift */,
+				B0F5BD3128BA7322005D3A98 /* merchantView.swift */,
+				B022C4C728BA7D5D0048DCB3 /* merchantReservationsView.swift */,
+				B0F5BD2F28BA5529005D3A98 /* reservationView.swift */,
 				B0EE080228B3D57300951983 /* comfirmationView.swift */,
 				B005037828AD471B00E43DFB /* userInfo.swift */,
 				B0ECB6C528A6DB0500F355B2 /* timeView.swift */,
@@ -152,13 +181,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B022C4C628BA78810048DCB3 /* loginMerchantView.swift in Sources */,
+				B0F5BD3228BA7322005D3A98 /* merchantView.swift in Sources */,
 				B005037928AD471B00E43DFB /* userInfo.swift in Sources */,
 				B052A8E928906B8C001141C8 /* ContentView.swift in Sources */,
 				B0ECB6C428A6D54700F355B2 /* informationVIew.swift in Sources */,
+				B022C4CD28BA7F980048DCB3 /* accountView.swift in Sources */,
 				B0ECB6C628A6DB0500F355B2 /* timeView.swift in Sources */,
 				B007E73928A168B90054FA80 /* Home.swift in Sources */,
+				B0F5BD3028BA5529005D3A98 /* reservationView.swift in Sources */,
+				B022C4CF28BA7FA60048DCB3 /* restaurantView.swift in Sources */,
 				B0EE080328B3D57300951983 /* comfirmationView.swift in Sources */,
 				B052A8E728906B8C001141C8 /* reserveUpAppApp.swift in Sources */,
+				B022C4C828BA7D5D0048DCB3 /* merchantReservationsView.swift in Sources */,
+				B022C4CB28BA7F8B0048DCB3 /* customerReservationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
