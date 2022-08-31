@@ -32,17 +32,14 @@ struct informationVIew: View {
             
             TextField("test@gmail.com", text:$email,
                       onEditingChanged: { (isBegin) in
-                if isBegin {
-                    print("Begins editing")
-                } else {
+                
                     userInfo.email = email
-                    print(email)
-                    print("end editing")
-                }
+                    
+                
             }
             )
             .font(.system(size: 20, weight: .semibold))
-            .foregroundColor(  isValidEmailAddr(strToValidate: userInfo.email) ? .black : .red)
+            .foregroundColor(  .black) // isValidEmailAddr(strToValidate: userInfo.email) ? .black : .red
             .padding(.top,5)
             
             Divider()
@@ -56,12 +53,8 @@ struct informationVIew: View {
             
             TextField("647-123-4567", text:$phone,
                       onEditingChanged: { (isBegin) in
-                if isBegin {
-                   
-                } else {
-                    userInfo.phone = phone
-                  
-                }
+                
+                userInfo.phone = phone
             })
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(.black)

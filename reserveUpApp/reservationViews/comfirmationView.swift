@@ -43,6 +43,7 @@ struct comfirmationView: View {
                 .padding(.top,1)
                 
                 Text(userInfo.newDate)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             
             
             Text("Number of people")
@@ -51,7 +52,8 @@ struct comfirmationView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,1)
             
-           // Text(userInfo.selectedNum)
+            Text(userInfo.selectedNum)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             
             Text("Time")
                 .fontWeight(.bold)
@@ -62,23 +64,30 @@ struct comfirmationView: View {
             Text(userInfo.selectedTime)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            Text("Email")
-                .fontWeight(.bold)
-                .foregroundColor(.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top,1)
-            
-            Text(userInfo.email)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Text("Phone Number")
-                .fontWeight(.bold)
-                .foregroundColor(.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top,1)
-            
             
         }
+            
+            VStack{
+                
+                Text("Email")
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top,1)
+                
+                Text(userInfo.email)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("Phone Number")
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top,1)
+                
+                    Text(userInfo.phone)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+            }
             
         }
         
@@ -96,6 +105,7 @@ struct comfirmationView: View {
                 .padding()
                 .background(.blue)
                 .cornerRadius(8)
+                .padding(.top,10)
               
                 
         })

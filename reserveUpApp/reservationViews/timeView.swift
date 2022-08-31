@@ -52,7 +52,7 @@ struct timeView: View {
                             .padding(.all)
                             .onTapGesture {
                                 self.selectedNum = num
-                                userInfo.selectedNum = num
+                                userInfo.selectedNum = String (num)
                                 withAnimation{
                                     self.isExpanded.toggle()
                                 }

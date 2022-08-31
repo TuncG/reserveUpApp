@@ -12,26 +12,34 @@ struct merchantReservationsView: View {
     
     var body: some View {
         
+        
         TabView{
             
             customerReservationView()
                 .tabItem({
                     Image(systemName: "phone.fill")
                     Text("reservations")
+                        
                 })
+               
+
             
             restaurantView()
                 .tabItem({
-                    Image(systemName: "slider.horizontal.fill")
+                    Image(systemName: "person.fill")
                     Text("restaurant")
                 })
             
             accountView()
                 .tabItem({
-                    Image(systemName: "person2.fill")
+                    Image(systemName: "person.fill")
                     Text("account")
                 })
+        }.onAppear() {
+            UITabBar.appearance().barTintColor = .black
         }
+        
+
         
         
      }

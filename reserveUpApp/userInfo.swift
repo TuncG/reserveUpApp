@@ -14,7 +14,7 @@ class UserInfo: ObservableObject {
     var newDate = ""
     
     var menuState = "people"
-    var selectedNum = 1
+    var selectedNum = "1"
     var currentDate = Date()
     
     var selectedTime = "2:00"

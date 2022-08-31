@@ -66,6 +66,37 @@
 			path = toolBarViews;
 			sourceTree = "<group>";
 		};
+		B022C4D028BD0ED10048DCB3 /* reservationViews */ = {
+			isa = PBXGroup;
+			children = (
+				B0EE080228B3D57300951983 /* comfirmationView.swift */,
+				B0ECB6C328A6D54700F355B2 /* informationVIew.swift */,
+				B0ECB6C528A6DB0500F355B2 /* timeView.swift */,
+				B0F5BD2F28BA5529005D3A98 /* reservationView.swift */,
+			);
+			path = reservationViews;
+			sourceTree = "<group>";
+		};
+		B022C4D128BD5FA50048DCB3 /* merchantViews */ = {
+			isa = PBXGroup;
+			children = (
+				B022C4C928BA7EF70048DCB3 /* toolBarViews */,
+				B0F5BD3128BA7322005D3A98 /* merchantView.swift */,
+				B022C4C528BA78810048DCB3 /* loginMerchantView.swift */,
+				B022C4C728BA7D5D0048DCB3 /* merchantReservationsView.swift */,
+			);
+			path = merchantViews;
+			sourceTree = "<group>";
+		};
+		B022C4D328BD604C0048DCB3 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */,
+				B052A8E828906B8C001141C8 /* ContentView.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
 		B052A8DA28906B8C001141C8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,18 +116,11 @@
 		B052A8E528906B8C001141C8 /* reserveUpApp */ = {
 			isa = PBXGroup;
 			children = (
-				B022C4C928BA7EF70048DCB3 /* toolBarViews */,
 				B007E73828A168B90054FA80 /* Home.swift */,
-				B022C4C528BA78810048DCB3 /* loginMerchantView.swift */,
-				B0F5BD3128BA7322005D3A98 /* merchantView.swift */,
-				B022C4C728BA7D5D0048DCB3 /* merchantReservationsView.swift */,
-				B0F5BD2F28BA5529005D3A98 /* reservationView.swift */,
-				B0EE080228B3D57300951983 /* comfirmationView.swift */,
+				B022C4D128BD5FA50048DCB3 /* merchantViews */,
+				B022C4D028BD0ED10048DCB3 /* reservationViews */,
+				B022C4D328BD604C0048DCB3 /* main */,
 				B005037828AD471B00E43DFB /* userInfo.swift */,
-				B0ECB6C528A6DB0500F355B2 /* timeView.swift */,
-				B0ECB6C328A6D54700F355B2 /* informationVIew.swift */,
-				B052A8E628906B8C001141C8 /* reserveUpAppApp.swift */,
-				B052A8E828906B8C001141C8 /* ContentView.swift */,
 				B052A8EA28906B8F001141C8 /* Assets.xcassets */,
 				B052A8EC28906B8F001141C8 /* Preview Content */,
 			);

@@ -21,6 +21,7 @@ struct reservationView: View {
     @State var nextMenu = false
     @State var infoMenu = false
     @State var confirmMenu = false
+    
 
     var userInfo = UserInfo()
     
@@ -56,6 +57,8 @@ struct reservationView: View {
                 }
                 
                 HStack{
+                    if infoMenu == true{
+                        
                     Button(action: {
                         if confirmMenu == true{
                             nextMenu = true
@@ -66,6 +69,7 @@ struct reservationView: View {
                             userInfo.email  = ""
                            infoMenu = false
                         }
+                
                         
                         
                     }, label: {
@@ -79,7 +83,9 @@ struct reservationView: View {
                         
                     })
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top,25)
+                    .padding(.top,15)
+                        
+                    }
                     
                     if confirmMenu == false {
                     Button(action: {
@@ -107,14 +113,14 @@ struct reservationView: View {
                         
                     })
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.top,25)
+                    .padding(.top,15)
                     }
                    
                 }
                 
             }
             .padding()
-            .padding(.bottom,90)
+            .padding(.bottom,70)
             Spacer()
             
         }
