@@ -9,7 +9,9 @@ import SwiftUI
 
 struct customerReservationView: View {
     var body: some View {
-        Text("Hello, ReservationView!")
+        customerList()
+            .navigationTitle("Reservations")
+            
     }
 }
 

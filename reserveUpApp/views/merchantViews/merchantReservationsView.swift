@@ -21,7 +21,7 @@ struct merchantReservationsView: View {
                     Text("reservations")
                         
                 })
-               
+                
 
             
             restaurantView()
@@ -35,9 +35,8 @@ struct merchantReservationsView: View {
                     Image(systemName: "person.fill")
                     Text("account")
                 })
-        }.onAppear() {
-            UITabBar.appearance().barTintColor = .black
         }
+       
         
 
         

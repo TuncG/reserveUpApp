@@ -9,7 +9,9 @@ import SwiftUI
 
 struct restaurantView: View {
     var body: some View {
-        Text("Hello, Restaurant view!")
+        List{
+            Text("Hello, Restaurant view!")
+        }
     }
 }
 

@@ -18,15 +18,17 @@ struct merchantView: View {
     var body: some View {
         
         VStack{
-            Text("ReserveUp")
-                .font(.title)
-                .fontWeight(.bold)
-                .frame(maxWidth: .infinity)
-                .background(.blue   )
-                .foregroundColor(.white)
-                .padding(.bottom, 40)
+            
             
             if loginView{
+                Text("ReserveUp")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity)
+                    .background(.blue   )
+                    .foregroundColor(.white)
+                    .padding(.bottom, 40)
+                
                 loginMerchantView()
                 
                 Button(action: {
@@ -42,7 +44,12 @@ struct merchantView: View {
                 })
             } else {
                 
-                merchantReservationsView()
+                NavigationView{
+                    merchantReservationsView()
+                        
+                }
+                
+                
                 
             }
             

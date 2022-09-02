@@ -17,7 +17,7 @@ struct loginMerchantView: View {
     var body: some View {
         
         
-        Text("Your Information")
+        Text("Login")
             .font(.title)
             .fontWeight(.bold)
         // .foregroundColor(Color("Black"))

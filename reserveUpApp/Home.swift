@@ -21,7 +21,11 @@ struct Home: View {
             reservationView()
         }
         else if merchantViews  {
-            merchantView()
+          
+                merchantView()
+                   
+            
+           
         } else {
             
            
