@@ -9,7 +9,6 @@ import SwiftUI
 
 struct merchantReservationsView: View {
     
-    
     var body: some View {
         
         
@@ -29,12 +28,16 @@ struct merchantReservationsView: View {
                     Image(systemName: "person.fill")
                     Text("restaurant")
                 })
+               
+            
             
             accountView()
                 .tabItem({
                     Image(systemName: "person.fill")
                     Text("account")
                 })
+                
+            
         }
        
         

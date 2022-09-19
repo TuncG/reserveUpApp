@@ -10,7 +10,7 @@ import SwiftUI
 struct customerReservationView: View {
     var body: some View {
         customerList()
-            .navigationTitle("Reservations")
+           // .navigationTitle("Reservations")
             
     }
 }

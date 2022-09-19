@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct accountView: View {
+    
     var body: some View {
-        List{
-            Text("Hello, account View!")
-        }
+        accountList()
     }
 }
 
@@ -20,3 +19,4 @@ struct accountView_Previews: PreviewProvider {
         accountView()
     }
 }
+

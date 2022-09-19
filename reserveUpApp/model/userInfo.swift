@@ -18,8 +18,7 @@ class UserInfo: ObservableObject {
     var currentDate = Date()
     
     var selectedTime = "2:00"
-    var password = "password"
-    
+    var name = ""
     
     
 }

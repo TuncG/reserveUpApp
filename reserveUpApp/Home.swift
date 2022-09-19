@@ -59,7 +59,9 @@ struct Home: View {
                         .padding(.bottom, 10)
                 })
                 
-            Button(action: { merchantViews = true }, label: {
+            Button(action: { merchantViews = true
+                
+            }, label: {
                 Text("Merchant Login")
                     .font(.system(size: 26, weight: .bold))
                     .foregroundColor(.white)
